@@ -1,6 +1,9 @@
 # Emily Falkner (enfalkne), Scott Dexheimer (SDexh), Savannah Puckett (snpucket)
-#!/bin/bash
+
 # File: Makefile
 
-HelloWorld: HelloWorld.c
+HelloWorld: HelloWorld.o
+        gcc HelloWorld.o -o HelloWorld
+
+HelloWorld.o: HelloWorld.c
         gcc -c HelloWorld.c
