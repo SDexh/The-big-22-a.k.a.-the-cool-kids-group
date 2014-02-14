@@ -1,5 +1,5 @@
 #!/bin/bash
 # File: Makefile
 
-HelloWorld.o: HelloWorld.c
+HelloWorld: HelloWorld.c
         gcc -c HelloWorld.c
