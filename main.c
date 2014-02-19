@@ -1,3 +1,5 @@
+/*Mathew Scott Dexhimer, Savannah Puckett, Emily Falker
+  Group 22 https://github.com/SDexh/The-big-22-a.k.a.-the-cool-kids-group */
 #include "common.h"
 
 int main (int argc, const char *argv[])
@@ -6,7 +8,8 @@ int main (int argc, const char *argv[])
     char source_name[MAX_FILE_NAME_LENGTH];
     char date[DATE_STRING_LENGTH];
     
-   /* Missing Code Here */
+    source_file = init_lister(argv, source_name, date);
+	
     return 0;
 }
 FILE *init_lister(const char *name, char source_file_name[], char dte[])
