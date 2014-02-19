@@ -48,9 +48,11 @@ BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
     char source_buffer[MAX_SOURCE_LINE_LENGTH];
     static int line_number = 0;
     
-    if (1) //This= is missing a condition
+    if (fgets(source_buffer, MAX_SOURCE_LINE_LENGTH, src_file) != NULL)
     {
-		/*  Missing Code Here */
+      print_buffer = sprintf(source_buffer, "%s", line_number);
+       line_number++;
+       print_line(char line[], char source_name_to_print[], char date_to_print[]);
         return (TRUE);
     }
     else
