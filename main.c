@@ -11,10 +11,20 @@ int main (int argc, const char *argv[])
 }
 FILE *init_lister(const char *name, char source_file_name[], char dte[])
 {
-    time_t timer;
+    time_t timer, *timep;
+	struct tm *timetm;
     FILE *file;
-    
-    /* Missing Code Here */
+	int i = 0;
+	timep = &timer;
+	timetm = localtime(timep);
+	strftime(dte, 11, "%x", timetm);
+	while(*name != '\n')
+	{
+		source_file_name[i] = *name;
+		name++;
+		i++;
+	}
+	file = fopen(source_file_name, "r");
     return file;
 }
 BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
@@ -23,7 +33,7 @@ BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
     char source_buffer[MAX_SOURCE_LINE_LENGTH];
     static int line_number = 0;
     
-    if (1) //This is missing a condition
+    if (1) //This= is missing a condition
     {
 		/*  Missing Code Here */
         return (TRUE);
