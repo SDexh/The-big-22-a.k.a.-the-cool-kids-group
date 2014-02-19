@@ -37,6 +37,6 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[])
 static void print_page_header(char source_name[], char date[])
 {
     static int page_number = 0;
-    
-    /* Missing Code Here */
+	page_number ++;    
+	printf("%s %d %s\n", source_name, page_number, date);
 }
