@@ -34,9 +34,10 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[])
 	}
 }
 
-static void print_page_header(char source_name[], char date[])
+static void print_page_header(char source_name[], char date[]) //creates a page header
 {
-    static int page_number = 0;
-	page_number ++;    
-	printf("%s %d %s\n", source_name, page_number, date);
+    static int page_number = 0; //satically creates a variable called page number
+
+	page_number ++;    //increases the page number up by one.
+	printf("%s %d %s\n", source_name, page_number, date); //prints out a header with the file name, page number and the date
 }
