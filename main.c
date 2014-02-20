@@ -8,9 +8,11 @@ int main (int argc, const char *argv[])
     char source_name[MAX_FILE_NAME_LENGTH];
     char date[DATE_STRING_LENGTH];
     
-    source_file = init_lister(*argv, source_name, date);
-	
-    return 0;
+    source_file = init_lister(*argv, source_name, date); //makes the pointer source_file and calls the init_lister
+	if (get_source_line(source_file, source_name, date)) // calls the boolean command.
+		return 0; //if succeds return 0
+	else
+		return 1;//if fails return 1;
 }
 
 //creates the file stream and the name and date to appropriate arrays
