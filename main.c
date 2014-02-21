@@ -1,4 +1,4 @@
-/*Mathew Scott Dexhimer, Savannah Puckett, Emily Falker
+/*Mathew Scott Dexhimer(SDexh), Savannah Puckett(snpucket), Emily Falker(emfalkne)
   Group 22 https://github.com/SDexh/The-big-22-a.k.a.-the-cool-kids-group 
   Each Member of our group did an even share of the work on this project even though not all
   of us have the same amount of commits. We found it easier to all work on one computer (Scott's) that
@@ -13,14 +13,13 @@
 //new function that converts the structure tm into a desired string
 void inttostring(char str[], struct tm *now);
 
-int main ()//int argc, const char *argv[])
+int main (int argc, const char *argv[])
 {
     FILE *source_file;
-	char argv[] = "NEWTON.PAS";
     char source_name[MAX_FILE_NAME_LENGTH];
     char date[DATE_STRING_LENGTH];
 
-    source_file = init_lister(argv, source_name, date); //makes the pointer source_file and calls the init_lister
+    source_file = init_lister(*argv, source_name, date); //makes the pointer source_file and calls the init_lister
 	while (get_source_line(source_file, source_name, date)) // calls the boolean command.
 	{}
 	return 0;
